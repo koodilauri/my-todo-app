@@ -8,12 +8,7 @@ const Container = styled.div`
 
 const ToggleCheckbox = styled.input``;
 
-interface IProps {
-  className?: string;
-}
-
-function ToggleSwitchEl(props: IProps) {
-  const { className } = props;
+function ToggleSwitchEl() {
   return (
     <Container className="block hover:bg-gray-50 px-4 py-4 sm:px-6 flex items-center justify-between">
       <div className="relative inline-block w-10 mr-2 align-middle">
