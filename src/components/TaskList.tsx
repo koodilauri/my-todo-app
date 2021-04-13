@@ -10,12 +10,17 @@ interface IProps {
 const Container = styled.div``;
 
 function TaskListEl(props: IProps) {
-  const { listType, show } = props;
+  const { listType } = props;
 
   return (
-    <Container className={show ? `block` : `hidden`}>
-      <h2>{listType}</h2>
-      <TaskCard />
+    <Container className="block w-full">
+      <h2 className="bg-pink-700 px-4 py-5 border-b rounded-t sm:px-6 text-lg leading-6 font-medium text-white">
+        {listType}
+      </h2>
+      <ul className="divide-y divide-gray-200">
+        <TaskCard />
+        <TaskCard />
+      </ul>
     </Container>
   );
 }
