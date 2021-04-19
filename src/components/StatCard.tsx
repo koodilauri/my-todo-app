@@ -2,11 +2,13 @@ import styled from 'styled-components';
 
 interface IProps {
   className?: string;
-  stats?: {
-    name?: string;
-    planned?: number;
-    done?: number;
-  };
+  stats?:
+    | {
+        name?: string;
+        planned?: number;
+        done?: number;
+      }
+    | any;
 }
 
 const Container = styled.div``;
@@ -15,7 +17,7 @@ function StatCardEl(props: IProps) {
   const { stats } = props;
 
   return (
-    <Container className="inline-block align-bottom rounded-lg shadow transform transition-all w-full p-5 flex items-start">
+    <Container className="align-bottom rounded-lg shadow transform transition-all w-full p-5 flex flex-col items-start">
       <h3 className="text-sm leading-6 font-medium text-gray-400">
         {stats.name}
       </h3>
