@@ -1,18 +1,14 @@
-import React, { useContext } from 'react';
+import { useService } from '@xstate/react';
 import styled from 'styled-components';
-import { Context } from '../context/TodoContext';
-import { deleteTodo } from '../actions/TodoActions';
-import { TaskCard } from './TaskCard';
+
+import { appService } from '../../machines/app';
+import { TaskListItem } from './TaskListItem';
 
 const Container = styled.div``;
 
 function TaskListEl() {
-  const {
-    state: { todos },
-    dispatch,
-  } = useContext(Context);
-
-  const deleteHandler = (id: string) => dispatch(deleteTodo(id));
+  const [state] = useService(appService);
+  const { todos } = state.context;
 
   return (
     <Container className="block w-full">
@@ -22,11 +18,7 @@ function TaskListEl() {
       {todos.length > 0 ? (
         <ul className="divide-y divide-gray-200">
           {todos.map((item) => (
-            <TaskCard
-              key={item.id}
-              title={item.title}
-              deleteHandler={deleteHandler}
-            />
+            <TaskListItem key={item.id} todo={item} />
           ))}
         </ul>
       ) : (
@@ -38,5 +30,4 @@ function TaskListEl() {
   );
 }
 
-export const TaskList: React.FC = TaskListEl;
-// export default TaskList;
+export const TaskList = TaskListEl;

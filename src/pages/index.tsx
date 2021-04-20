@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import { Layout } from '../components/layout/Layout';
-import { TaskList } from '../components/TaskList';
+import { TaskList } from '../components/TodoList/TaskList';
 import { TaskStats } from '../components/TaskStats';
 import { AddTodo } from '../components/AddTodo';
 
