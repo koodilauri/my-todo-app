@@ -59,7 +59,7 @@ const appMachine = Machine<AppContext, AppStateSchema, AppEvent>({
   on: {
     'TODO.CREATE': {
       actions: [
-        assign((ctx, e) => ({
+        assign((ctx: any, e) => ({
           todos: [
             ...ctx.todos,
             spawn(
