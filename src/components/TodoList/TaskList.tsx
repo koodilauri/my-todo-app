@@ -12,7 +12,7 @@ function TaskListEl() {
 
   return (
     <Container className="block w-full">
-      <h2 className="bg-pink-700 px-4 py-5 border-b rounded-t sm:px-6 text-lg leading-6 font-medium text-white">
+      <h2 className="bg-pink-700 px-4 sm:py-5 py-2 border-b rounded-t sm:px-6 sm:text-lg text-base leading-6 font-bold text-white">
         Todos
       </h2>
       {todos.length > 0 ? (
@@ -22,8 +22,8 @@ function TaskListEl() {
           ))}
         </ul>
       ) : (
-        <h2 className="px-4 py-5 sm:px-6 text-lg leading-6 font-medium">
-          No Todos!
+        <h2 className="px-4 sm:py-5 py-2 sm:px-6 sm:text-lg text-base leading-6 font-medium text-center">
+          No tasks, add some!
         </h2>
       )}
     </Container>

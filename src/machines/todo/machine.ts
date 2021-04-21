@@ -23,7 +23,6 @@ const todoMachine = Machine<TodoContext, TodoEvent>({
         },
       },
     },
-    editing: {},
   },
 });
 

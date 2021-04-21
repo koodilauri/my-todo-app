@@ -2,7 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Raleway';
+  src: url('fonts/Raleway-VariableFont_wght.ttf');
+}
+@font-face {
+  font-family: 'Rubik';
+  src: url('fonts/Rubik-VariableFont_wght.ttf');
+}
+
 html {
   font-size: 20px;
   box-sizing: border-box;
+}
+h1,h2,h3,h4,h5 {
+  font-family: 'Rubik', sans-serif;
+}
+div {
+  font-family: 'Raleway', sans-serif;
 }

@@ -27,7 +27,9 @@ export const Layout = (props: IProps) => {
         <title>My To-do list</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Container>{children}</Container>
+      <Container className="md:space-y-8 sm:space-y-4 space-y-2">
+        {children}
+      </Container>
       <Footer />
     </Wrapper>
   );
